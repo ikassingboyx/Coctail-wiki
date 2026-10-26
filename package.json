@@ -1,0 +1,30 @@
+{
+  "name": "coctail-wiki",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cocktail Wiki monorepo",
+  "scripts": {
+    "dev": "concurrently \"npm:dev:web\" \"npm:dev:api\"",
+    "dev:web": "npm run dev --workspace web",
+    "dev:api": "npm run dev --workspace api",
+    "build": "npm run build --workspace web && npm run build --workspace api",
+    "lint": "npm run lint --workspace web"
+  },
+  "workspaces": [
+    "apps/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ikassingboyx/Coctail-wiki.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ikassingboyx/Coctail-wiki/issues"
+  },
+  "homepage": "https://github.com/ikassingboyx/Coctail-wiki#readme",
+  "devDependencies": {
+    "concurrently": "^10.0.6"
+  }
+}
